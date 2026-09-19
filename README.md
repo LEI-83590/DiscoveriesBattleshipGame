@@ -2,7 +2,7 @@
 
 Basic academic version of Battleship game to build upon.
 
- Nickname para o grupo:
+ Nickname para o grupo: Grupo da Mestre
 
 
 | Número | Nome | Curso |
