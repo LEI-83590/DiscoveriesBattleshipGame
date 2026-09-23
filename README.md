@@ -32,7 +32,7 @@ O jogo decorre por turnos, alternando entre os dois jogadores. Em cada turno, o 
 
 O adversário deverá então indicar o resultado do ataque:
 
-Água — quando a coordenada indicada não corresponde à posição de nenhum navio.
+Água — quando a coordenada indicada não corresponde à posição de nenhum navio
 
 Acerto — quando a coordenada indicada corresponde a uma posição ocupada por um navio.
 
