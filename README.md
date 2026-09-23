@@ -25,3 +25,17 @@ No **Discoveries Battleship Game**, cada jogador dispõe de uma frota composta p
 | **Barca** | Submarino | Barge | 1 | 4 |
 
 A dimensão de um navio corresponde ao número de quadrados consecutivos que este ocupa na grelha. Os navios podem ser posicionados horizontal ou verticalmente, mas não podem sobrepor-se nem tocar-se entre si. Os navios podem, contudo, ser colocados junto às bordas da grelha.
+
+## Turnos e Ataques
+
+O jogo decorre por turnos, alternando entre os dois jogadores. Em cada turno, o jogador deve indicar uma coordenada correspondente a uma posição da grelha do adversário.
+
+O adversário deverá então indicar o resultado do ataque:
+
+Água — quando a coordenada indicada não corresponde à posição de nenhum navio.
+
+Acerto — quando a coordenada indicada corresponde a uma posição ocupada por um navio.
+
+Após cada ataque, o resultado deverá ser registado na grelha “o mar do adversário”, permitindo ao jogador acompanhar as posições que já foram alvo de ataques.
+
+Os jogadores alternam os turnos até que um dos jogadores consiga afundar todos os navios do adversário.
