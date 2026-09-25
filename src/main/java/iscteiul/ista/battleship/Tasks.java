@@ -1,6 +1,3 @@
-/**
- *
- */
 package iscteiul.ista.battleship;
 
 import java.util.Scanner;
@@ -9,6 +6,10 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Provides the command-line tasks used to exercise the battleship game
+ * incrementally, from ship creation through firing rounds.
+ */
 public class Tasks {
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -35,8 +36,8 @@ public class Tasks {
     /////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This task tests the building up of ships: For each ship, reads positions and
-     * indicates whether the ship occupies each one of such positions or not
+     * Tests ship creation by reading ships and positions and logging whether
+     * each position is occupied by the corresponding ship.
      */
     public static void taskA() {
         Scanner in = new Scanner(System.in);
@@ -51,7 +52,7 @@ public class Tasks {
     }
 
     /**
-     * This task tests the building up of fleets
+     * Tests fleet creation and status commands read from standard input.
      */
     public static void taskB() {
         Scanner in = new Scanner(System.in);
@@ -76,8 +77,8 @@ public class Tasks {
     }
 
     /**
-     * This task tests the building up of fleets and takes into consideration the
-     * possibility of cheating
+     * Tests fleet creation and status commands, including the command that
+     * prints the fleet map.
      */
     public static void taskC() {
         Scanner in = new Scanner(System.in);
@@ -105,7 +106,8 @@ public class Tasks {
     }
 
     /**
-     * This task also tests the fighting element of a round of three shots
+     * Tests the fighting phase by processing rounds of three shots against a
+     * fleet.
      */
     public static void taskD() {
 
@@ -150,10 +152,10 @@ public class Tasks {
     }
 
     /**
-     * This operation allows the build up of a fleet, given user data
+     * Builds a fleet from ship data read from the supplied scanner.
      *
-     * @param in The scanner to read from
-     * @return The fleet that has been built
+     * @param in the scanner to read from
+     * @return the fleet that has been built
      */
     static Fleet buildFleet(Scanner in) {
         assert in != null;
@@ -178,10 +180,10 @@ public class Tasks {
     }
 
     /**
-     * This operation reads data about a ship, build it and returns it
+     * Reads ship data, creates the corresponding ship, and returns it.
      *
-     * @param in The scanner to read from
-     * @return The created ship based on the data that has been read
+     * @param in the scanner to read from
+     * @return the ship created from the input data
      */
     static Ship readShip(Scanner in) {
         String shipKind = in.next();
@@ -192,10 +194,10 @@ public class Tasks {
     }
 
     /**
-     * This operation allows reading a position in the map
+     * Reads a row and column and creates the corresponding map position.
      *
-     * @param in The scanner to read from
-     * @return The position that has been read
+     * @param in the scanner to read from
+     * @return the position read from the input
      */
     static Position readPosition(Scanner in) {
         int row = in.nextInt();
@@ -204,11 +206,10 @@ public class Tasks {
     }
 
     /**
-     * This operation allows firing a round of shots (three) over a fleet, in the
-     * context of a game
+     * Fires a round of three shots in the context of a game.
      *
-     * @param in   The scanner to read from
-     * @param game The context game while fleet is being attacked
+     * @param in the scanner to read from
+     * @param game the game whose fleet is being attacked
      */
     static void firingRound(Scanner in, IGame game) {
         for (int i = 0; i < NUMBER_SHOTS; i++) {
